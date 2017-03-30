@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="RoundImageView">
-        <attr name="radius" format="reference|dimension" />
-    </declare-styleable>
+  <declare-styleable name="RoundImageView">
+    <attr format="reference|dimension" name="radius"/>
+  </declare-styleable>
+
+  <!-- 标题模板自定义属性 -->
+  <declare-styleable name="ActivityTitle">
+    <!-- 标题文案 -->
+    <attr format="string" name="titleText"/>
+    <!-- 是否有back按钮 -->
+    <attr format="boolean" name="canBack"/>
+    <!-- back按钮文案 -->
+    <attr format="string" name="backText"/>
+    <!-- 右侧更多功能按钮文字 -->
+    <attr format="string" name="moreText"/>
+  </declare-styleable>
+
+  <!-- 条形控制控件自定义属性 -->
+  <declare-styleable name="TCLineView">
+    <!-- 名称 -->
+    <attr format="string" name="name"/>
+    <!-- 内容或当前状态 -->
+    <attr format="string" name="content"/>
+    <!-- 是否是列表中最后一个 -->
+    <attr format="boolean" name="isBottom"/>
+    <!-- 是否可以跳转 -->
+    <attr format="boolean" name="canNav"/>
+    <!-- 是否是开关 -->
+    <attr format="boolean" name="isSwitch"/>
+  </declare-styleable>
+
+  <!-- 飘星自定义属性 -->
+  <declare-styleable name="HeartLayout">
+    <attr format="dimension" name="initX"/>
+    <attr format="dimension" name="initY"/>
+    <attr format="dimension" name="xRand"/>c
+    <attr format="dimension" name="animLengthRand"/>
+    <attr format="dimension" name="xPointFactor"/>
+    <attr format="dimension" name="animLength"/>
+    <attr format="dimension" name="heart_width"/>
+    <attr format="dimension" name="heart_height"/>
+    <attr format="integer" name="bezierFactor"/>
+    <attr format="integer" name="anim_duration"/>
+  </declare-styleable>
+  <declare-styleable name="CircleImageView">
+    <attr format="dimension" name="border_width"/>
+    <attr format="color" name="border_color"/>
+  </declare-styleable>
+
+  <declare-styleable name="CircleLoading">
+    <attr format="color" name="point_color"/>
+    <attr format="boolean" name="isdynamic"/>
+  </declare-styleable>
 </resources>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/rg_background"
+              android:orientation="vertical">
+    <!-- 登陆文本框 -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:paddingTop="80dip">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_part_full_bg">
+
+            <EditText
+                android:id="@+id/et_login_username"
+                style="@style/login_edittext_combin_style1"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/btn_login_username_clear"
+                android:drawableLeft="@drawable/user_login_name_left_icon"
+                android:hint="@string/loginActivity_username_des"
+                android:maxLength="30"
+                android:singleLine="true"/>
+
+            <Button
+                android:id="@+id/btn_login_username_clear"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/clear_icon"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_part_full_bg">
+
+            <EditText
+                android:id="@+id/et_login_pwd"
+                style="@style/login_edittext_combin_style1"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/btn_login_forget"
+                android:drawableLeft="@drawable/user_login_psw_left_icon"
+                android:hint="@string/loginActivity_pwd_des"
+                android:inputType="textPassword"
+                android:maxLength="14"
+                android:singleLine="true"/>
+
+            <Button
+                android:id="@+id/btn_login_forget"
+                style="@style/login_psw_edittext_style"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@id/et_login_pwd"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/forgetPwd"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_login_login"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dip"
+                android:layout_weight="5"
+                android:background="@drawable/login_login_button_selector"
+                android:text="@string/loginActivity_login"
+                android:textColor="#ffffff"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_register"
+                style="@style/login_psw_edittext_style"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/register"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/other_login_ways"/>
+</LinearLayout>
